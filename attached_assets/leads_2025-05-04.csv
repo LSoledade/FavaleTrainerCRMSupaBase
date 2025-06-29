@@ -1,9 +1,0 @@
-ID,Nome,Email,Telefone,Estado,Status,Fonte,Campanha,Tags,Data de Entrada,Observações
-3,Carolina Oliveira,carol.oliveira@example.com,(31) 97654-3210,MG,Aluno,Favale,Indicação,"Reabilitação, Personalizado",04/03/2023,Em recuperação de lesão no joelho
-4,Daniel Lima,daniel.lima@example.com,(41) 98765-1234,PR,Aluno,Pink,Site,"Iniciante, Emagrecimento",19/04/2023,Nunca treinou antes
-5,Fernanda Souza,fernanda.souza@example.com,(51) 99876-5678,RS,Lead,Favale,Email,"Preparação, Competição",14/05/2023,Interessada em preparação para competição
-6,Gabriel Costa,gabriel.costa@example.com,(71) 98765-9876,BA,Lead,Pink,Instagram,"Fitness, Nutrição",09/06/2023,Quer melhorar condicionamento físico
-7,Juliana Martins,juliana.martins@example.com,(81) 99876-4567,PE,Aluno,Favale,Facebook,"Hiit, Emagrecimento",30/06/2023,Prefere treinos intensos
-8,Lucas Pereira,lucas.pereira@example.com,(85) 98765-7654,CE,Lead,Pink,Site,"Musculação, Nutrição",14/08/2023,Quer orientação nutricional
-9,Mariana Castro,mariana.castro@example.com,(91) 99876-3456,PA,Aluno,Favale,Email,"Pilates, Flexibilidade",19/09/2023,Focada em melhorar postura
-10,Rafael Almeida,rafael.almeida@example.com,(62) 98765-8765,GO,Lead,Pink,Indicação,"CrossFit, Condicionamento",09/10/2023,Praticante de CrossFit há 2 anos
