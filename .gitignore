@@ -22,3 +22,52 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# VS Code Server files
+.config/
+.vscode-server/
+
+# Database
+*.sqlite
+*.db
+drizzle/
+
+# Cache
+.cache/
+.next/
+.nuxt/
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+
+# Backup files
+*.bak
+*.backup
+
+# Large binary files
+*.zip
+*.rar
+
+# Authentication cookies
+cookies.txt
+
+# Production configuration files
+*production*.js
+*production*.ts
+!server/production-config.ts
+
+# Sensitive data
+*.key
+*.pem
+*.p12
+*.cert
+
+# Generated assets
+generated-*
+*.generated.*
