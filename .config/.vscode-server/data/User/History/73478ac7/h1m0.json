@@ -1,0 +1,10 @@
+{
+    "git.confirmSync": false,
+    "dart.flutterSdkPath": "E:\\flutter",
+    "git.enableSmartCommit": true,
+    "chat.mcp.discovery.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "remote.SSH.remotePlatform": {
+        "2afd2358-53fa-4094-a25b-4f1369c88c23-00-nhwvqxtkiw59.worf.replit.dev": "linux"
+    }
+}

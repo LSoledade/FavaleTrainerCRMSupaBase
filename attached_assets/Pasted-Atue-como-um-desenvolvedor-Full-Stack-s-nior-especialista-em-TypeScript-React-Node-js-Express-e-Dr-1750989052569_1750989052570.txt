@@ -1,0 +1,78 @@
+Atue como um desenvolvedor Full-Stack sênior especialista em TypeScript, React, Node.js/Express e Drizzle ORM. Meu projeto é um CRM para personal trainers.
+
+**Objetivo Geral:**
+Sua principal missão é desenvolver um novo sistema de agendamento e gestão de professores que irá **substituir completamente a lógica de calendário atual**. O novo sistema deve ser robusto, integrado e seguir as melhores práticas de tipagem com TypeScript para garantir a manutenibilidade e escalabilidade do código.
+
+**Estrutura do Projeto:**
+- Back-end em `server/`
+- Front-end em `client/`
+- Schema do banco de dados em `shared/schema.ts`
+- Rotas da API em `server/routes/`
+- Controladores da API em `server/controllers/`
+- Páginas React em `client/src/pages/`
+- Componentes React em `client/src/components/`
+
+Sua tarefa é implementar duas funcionalidades principais: **1) Gestão de Professores** e **2) Calendário de Aulas**.
+
+---
+
+**PARTE 1: MÓDULO DE GESTÃO DE PROFESSORES**
+
+**1.1 - Back-End (Server):**
+
+* **Arquivo `shared/schema.ts`:**
+    * Verifique a tabela `users`. Se ainda não existir, adicione uma coluna `role` como um `enum` com os valores `'admin'` e `'professor'`.
+* **Arquivo `server/routes/user.routes.ts`:**
+    * Crie rotas para gerenciar professores: `GET /api/users/professors`, `POST /api/users/professors`, `PUT /api/users/professors/:id`, `DELETE /api/users/professors/:id`.
+* **Arquivo `server/controllers/user.controller.ts`:**
+    * Implemente os controllers para as rotas acima (`getAllProfessors`, `createProfessor`, etc.), garantindo que a lógica de negócio (como hash de senha) seja aplicada.
+
+**1.2 - Front-End (Client com TypeScript):**
+
+* **Tipagem (em `client/src/types/index.ts` ou similar):**
+    * Crie uma interface `IProfessor` que defina a estrutura de um objeto de professor (ex: `id`, `name`, `email`).
+* **Arquivo `client/src/pages/ProfessorsPage.tsx`:**
+    * Crie a página que busca e exibe a lista de professores. Use a interface `IProfessor[]` para tipar o estado que armazena a lista.
+* **Arquivo `client/src/components/professors/ProfessorTable.tsx`:**
+    * Crie este componente. Suas `props` devem ser tipadas, recebendo `professors: IProfessor[]`.
+    * Use o componente `Table` de `client/src/components/ui/table.tsx` para exibir os dados.
+* **Arquivo `client/src/components/professors/ProfessorDialog.tsx`:**
+    * Crie o modal de criação/edição. As `props` devem incluir `professor?: IProfessor` para diferenciar entre os modos de edição e criação.
+* **Arquivos `client/src/App.tsx` e `client/src/components/Sidebar.tsx`:**
+    * Adicione a rota `/professors` e o link de navegação correspondente.
+
+---
+
+**PARTE 2: MÓDULO DE CALENDÁRIO DE AULAS**
+
+**2.1 - Back-End (Server):**
+
+* **Arquivo `shared/schema.ts`:**
+    * Crie as tabelas `AgendamentosRecorrentes` e `Aulas` conforme especificado anteriormente (com `regras` em JSON, `status` como enum, etc.).
+* **Arquivo `server/routes/scheduling.routes.ts`:**
+    * Crie este novo arquivo de rotas com endpoints para:
+        * `POST /api/scheduling/recurrent`
+        * `GET /api/scheduling/classes`
+        * `PATCH /api/scheduling/classes/:id`
+* **Arquivo `server/controllers/scheduling.controller.ts`:**
+    * Implemente a lógica para as rotas, incluindo a **validação crítica de conflito de horário** para professores e clientes. Se houver conflito, retorne um erro `409 Conflict`.
+    * A lógica de criação do agendamento recorrente deve gerar as instâncias de `Aula` para os próximos 6 meses.
+
+**2.2 - Front-End (Client com TypeScript):**
+
+* **Tipagem (em `client/src/types/index.ts` ou similar):**
+    * Crie interfaces `IAula`, `IAgendamentoRecorrente` e `IRegraRecorrencia` para tipar os dados da API e os estados dos componentes. `IAula` deve estar em conformidade com o que a biblioteca `react-big-calendar` espera para um evento.
+* **Arquivo `client/src/pages/CalendarPage.tsx`:**
+    * Use `react-big-calendar` (e `@types/react-big-calendar`).
+    * O estado que armazena as aulas deve ser tipado como `IAula[]`.
+    * Implemente a busca e a renderização das aulas, com cores baseadas no `status`.
+* **Arquivo `client/src/components/scheduling/AppointmentDialog.tsx`:**
+    * Crie este modal. Suas `props` devem ser fortemente tipadas (ex: `aula: IAula`, `onClose: () => void`).
+* **Arquivo `client/src/components/scheduling/NewRecurrenceForm.tsx`:**
+    * Crie este formulário. O estado do formulário deve ser tipado usando `IAgendamentoRecorrente` ou um tipo parcial.
+    * Implemente a lógica para adicionar regras de recorrência dinamicamente.
+    * Trate o erro de conflito de horário vindo da API, exibindo um feedback claro ao usuário.
+* **Arquivos `client/src/App.tsx` e `client/src/components/Sidebar.tsx`:**
+    * Garanta que a rota `/calendar` exista e que haja um link "Calendário" na sidebar.
+
+Por favor, gere todo o código necessário para implementar essas duas funcionalidades, substituindo a lógica antiga e aderindo estritamente às melhores práticas de TypeScript.

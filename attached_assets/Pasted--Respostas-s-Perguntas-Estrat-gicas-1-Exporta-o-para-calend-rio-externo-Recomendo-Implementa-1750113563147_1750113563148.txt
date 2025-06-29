@@ -1,0 +1,79 @@
+📋 Respostas às Perguntas Estratégicas:
+1. Exportação para calendário externo:
+Recomendo: Implementar exportação ICS simples
+
+Usuários podem importar no Google Calendar/Outlook pessoal
+Arquivo .ics por período ou professor
+Não precisa de API, só geração de arquivo
+
+typescript// Exemplo: /api/export/calendar?trainer=1&period=month
+// Retorna arquivo .ics para download
+2. Sessões recorrentes:
+Recomendo: Sessões individuais no banco
+sql-- Cada sessão é um registro separado
+-- Mas com referência à série
+parent_session_id INTEGER, -- ID da primeira sessão da série
+recurrence_group_id UUID,   -- Agrupa toda a série
+Vantagens:
+
+Editar sessões individuais sem afetar outras
+Cancelar uma sessão específica
+Relatórios mais simples
+Reagendamentos flexíveis
+
+3. Verificação de conflitos:
+Recomendo:
+
+15 minutos de tolerância entre sessões
+Verificação em tempo real no frontend
+Sugestões automáticas de horários próximos
+
+typescript// Regras:
+// - Mesmo professor não pode ter 2 sessões simultâneas
+// - Intervalo mínimo de 15min entre sessões
+// - Verificar horário de trabalho do professor
+4. Professores no sistema:
+Precisa migração - vou criar seed completo:
+sql-- Inserir todos os professores por origem
+INSERT INTO trainers (name, origin) VALUES 
+('Andre Favale', 'favale'),
+('Thais', 'pink'),
+-- ... todos os outros
+5. Notificações:
+Manter WhatsApp + adicionar interno:
+
+WhatsApp para clientes (agendamento, cobrança)
+Notificações internas para professores
+Dashboard de alertas
+
+🚀 Plano de Implementação Otimizado:
+Fase 1 (2-3 horas): Base Sólida
+bash✅ Seed de professores por origem
+✅ Atualizar formulário de agendamento 
+✅ Dropdown de alunos (leads com tag "aluno")
+✅ Campos de frequência semanal
+✅ Remover integração Google Calendar
+Fase 2 (3-4 horas): Funcionalidades Avançadas
+bash✅ Sistema de conflitos
+✅ Geração de sessões recorrentes
+✅ Validação em tempo real
+✅ Sugestões de horário
+Fase 3 (2-3 horas): Polimento
+bash✅ Exportação ICS
+✅ Melhorias nos relatórios
+✅ Dashboard de conflitos
+✅ Notificações internas
+💡 Benefícios Imediatos da Migração:
+Para o Negócio:
+
+❌ Sem dependência de API externa
+✅ Controle total da lógica
+✅ Customizações específicas do seu negócio
+✅ Sem limites de requisições
+
+Para os Usuários:
+
+⚡ Interface mais rápida (sem latência da API)
+🎯 Funcionalidades específicas (frequência semanal, origem)
+📱 Melhor UX para personal training
+🔄 Sincronização instantânea

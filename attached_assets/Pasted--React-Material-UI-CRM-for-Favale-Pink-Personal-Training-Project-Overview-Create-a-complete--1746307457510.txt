@@ -1,0 +1,90 @@
+# React Material-UI CRM for Favale&Pink Personal Training
+
+## Project Overview
+Create a complete CRM application using React and Material-UI for Favale&Pink, a personal training company. **The entire interface must be in Portuguese language**, including all labels, messages, and UI content. The application needs two primary screens: a Lead Management screen and a Dashboard, designed to handle approximately 20,000 leads.
+
+## Technical Requirements
+
+### Stack and Setup
+- React 18+ with functional components and hooks
+- Material-UI v5+ for component library
+- React Router for navigation
+- Context API or Redux for state management
+- Custom theme based on Favale&Pink brand colors (primary: #E91E63 or similar pink, secondary: dark purple/black, with white accents)
+- Responsive design for all screen sizes
+- Replit Database for data persistence if available
+
+### Project Structure
+- Modular component architecture
+- Separation of concerns (components, hooks, services, utils)
+- Custom theme configuration in a separate file
+- Consistent naming conventions and folder structure
+- Well-commented code with explanations in English
+
+## Core Features
+
+### Lead Management Screen
+- Data table with columns:
+  * Data de entrada (Entry Date)
+  * Nome (Name)
+  * Telefone (Phone)
+  * Estado (State)
+  * Campanha (Campaign)
+  * Tags (multiple, dynamic)
+  * Origem (Source: Favale or Pink)
+  * Status (Aluno/Student or Lead)
+- CRUD operations for leads with form validation
+- Advanced filtering and sorting capabilities for all fields
+- Dynamic tag management system (create, edit, apply, remove tags)
+- Batch operations for multiple leads
+- Pagination or virtual scrolling for handling large datasets
+- Visual distinction between "Aluno" and "Lead" statuses using brand colors
+
+### Dashboard Screen
+- KPI cards showing:
+  * Total de leads (Total leads)
+  * Total de alunos (Total students)
+  * Taxa de conversão (Conversion rate)
+  * Leads por campanha (Leads by campaign)
+- Charts and graphs using brand colors:
+  * Pie chart for lead distribution by source
+  * Bar chart for leads by state
+  * Line chart for leads over time
+- Recent activity timeline or list
+- Customizable widget layout
+- Filter controls affecting all dashboard components
+
+### UX/UI Requirements
+- Clean, professional interface using the Favale&Pink color palette
+- Intuitive navigation with breadcrumbs where appropriate
+- Consistent spacing and typography following Material Design guidelines
+- Loading states and error handling with informative messages in Portuguese
+- Form validation with helpful error messages
+- Confirmation dialogs for destructive actions
+- Tooltips for complex features
+- Accessibility compliance (WCAG)
+
+## Implementation Approach
+1. Set up project with React, Material-UI, and routing
+2. Create and apply custom theme based on brand colors
+3. Implement reusable components (tables, forms, cards, etc.)
+4. Develop Lead Management screen with mock data
+5. Build Dashboard with visualizations
+6. Implement state management and data persistence
+7. Add filtering, sorting, and advanced features
+8. Polish UI and ensure responsive design
+9. Test across different screen sizes
+
+## Expected Deliverables
+- Complete React application with all specified features
+- Responsive design that works on desktop and mobile
+- Portuguese language UI throughout the application
+- Well-structured and commented code
+- README with setup and usage instructions
+
+## Additional Notes
+- The brand logo should be prominently displayed in the header
+- All date formats should follow Brazilian standard (DD/MM/YYYY)
+- Currency values should use Brazilian format (R$ 1.000,00)
+- Use realistic mock data that reflects a personal training business
+- Prioritize performance when handling large datasets

@@ -1,0 +1,88 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to /tmp/code-673b2724-f487-4e13-a58c-466a8238b0be
+Extension host agent listening on /tmp/code-673b2724-f487-4e13-a58c-466a8238b0be
+
+[18:16:11] 
+
+
+
+
+[18:16:11] Extension host agent started.
+[18:16:11] Started initializing default profile extensions in extensions installation folder. file:///home/runner/.vscode-server/extensions
+[18:16:11] ComputeTargetPlatform: linux-x64
+[18:16:11] Completed initializing default profile extensions in extensions installation folder. file:///home/runner/.vscode-server/extensions
+[18:16:11] [<unknown>][f5717a94][ExtensionHostConnection] New connection established.
+[18:16:11] [<unknown>][6a4aba3f][ManagementConnection] New connection established.
+[18:16:11] [<unknown>][f5717a94][ExtensionHostConnection] <441> Launched Extension Host Process.
+[18:16:14] ComputeTargetPlatform: linux-x64
+[18:16:15] Getting Manifest... github.copilot
+[18:16:15] Getting Manifest... github.copilot-chat
+[18:16:15] Installing extension: github.copilot {
+  installPreReleaseVersion: false,
+  donotIncludePackAndDependencies: true,
+  donotVerifySignature: false,
+  context: { clientTargetPlatform: 'win32-x64' },
+  isApplicationScoped: false,
+  profileLocation: _r {
+    scheme: 'file',
+    authority: '',
+    path: '/home/runner/.vscode-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///home/runner/.vscode-server/extensions/extensions.json',
+    _fsPath: '/home/runner/.vscode-server/extensions/extensions.json'
+  },
+  productVersion: { version: '1.100.2', date: '2025-05-14T21:47:40.416Z' }
+}
+[18:16:15] Installing the extension without checking dependencies and pack github.copilot
+[18:16:15] Installing extension: github.copilot-chat {
+  installPreReleaseVersion: false,
+  donotIncludePackAndDependencies: true,
+  donotVerifySignature: false,
+  context: { clientTargetPlatform: 'win32-x64' },
+  isApplicationScoped: false,
+  profileLocation: _r {
+    scheme: 'file',
+    authority: '',
+    path: '/home/runner/.vscode-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///home/runner/.vscode-server/extensions/extensions.json',
+    _fsPath: '/home/runner/.vscode-server/extensions/extensions.json'
+  },
+  productVersion: { version: '1.100.2', date: '2025-05-14T21:47:40.416Z' }
+}
+[18:16:15] Installing the extension without checking dependencies and pack github.copilot-chat
+[18:16:16] Extension signature verification result for github.copilot-chat: Success. Internal Code: 0. Executed: true. Duration: 1103ms.
+[18:16:16] Extension signature verification result for github.copilot: Success. Internal Code: 0. Executed: true. Duration: 1123ms.
+[18:16:17] Extracted extension to file:///home/runner/.vscode-server/extensions/github.copilot-chat-0.27.2: github.copilot-chat
+[18:16:17] Renamed to /home/runner/.vscode-server/extensions/github.copilot-chat-0.27.2
+[18:16:17] Extension installed successfully: github.copilot-chat file:///home/runner/.vscode-server/extensions/extensions.json
+[18:16:17] Extracted extension to file:///home/runner/.vscode-server/extensions/github.copilot-1.323.0: github.copilot
+[18:16:17] Renamed to /home/runner/.vscode-server/extensions/github.copilot-1.323.0
+[18:16:17] Extension installed successfully: github.copilot file:///home/runner/.vscode-server/extensions/extensions.json
+New EH opened, aborting shutdown
+[18:21:11] New EH opened, aborting shutdown
+[20:54:27] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+[21:01:32] [<unknown>][f5717a94][ExtensionHostConnection] <441> Extension Host Process exited with code: null, signal: SIGKILL.
+Last EH closed, waiting before shutting down
+[21:01:32] Last EH closed, waiting before shutting down
+[21:01:52] [<unknown>][f5717a94][ExtensionHostConnection] Unknown reconnection token (seen before).
+[21:01:53] [<unknown>][c0be3bd9][ExtensionHostConnection] New connection established.
+[21:01:53] [<unknown>][c0be3bd9][ExtensionHostConnection] <4995> Launched Extension Host Process.
+New EH opened, aborting shutdown
+[21:06:32] New EH opened, aborting shutdown
+[21:17:12] [<unknown>][6a4aba3f][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[21:17:12] [<unknown>][c0be3bd9][ExtensionHostConnection] <4995> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[21:17:12] Last EH closed, waiting before shutting down
+[21:17:29] [<unknown>][71705d1e][ManagementConnection] New connection established.
+[21:17:29] [<unknown>][37e845a4][ExtensionHostConnection] New connection established.
+[21:17:29] [<unknown>][37e845a4][ExtensionHostConnection] <5202> Launched Extension Host Process.
+[21:17:30] [<unknown>][71705d1e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
